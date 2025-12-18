@@ -10,8 +10,8 @@ author:
   company: QHR Technologies
 
 # Build settings
-baseurl: ""
-url: "https://shuped.github.io/spencer-shupe-blog"
+baseurl: "/spencer-shupe-blog"
+url: "https://shuped.github.io"
 permalink: /:year/:month/:day/:title/
 
 # Markdown settings
