@@ -96,6 +96,44 @@ Speckit's templates ensure consistency across features. You're not starting from
 ### 5. Works Well for Greenfield Projects
 The "0-to-1" workflow is particularly powerful for new projects where there's no existing code to constrain decisions.
 
+### 6. User Stories Drive Implementation
+The spec template emphasizes user stories with priorities (P1, P2, P3). This forces you to think about what delivers value first and enables incremental delivery.
+
+### 7. Constitution Check Is a Gate
+The plan template includes a "Constitution Check" section that acts as a gate before implementation. All principles must pass before proceeding.
+
+### 8. Tasks Have Parallel Markers
+The `[P]` marker in tasks indicates work that can be done in parallel (different files, no dependencies). This enables team coordination and faster development.
+
+### 9. Phases Enable Incremental Delivery
+Tasks are organized into phases with checkpoints. Each user story phase can be independently completed, tested, and deployed - supporting MVP-first development.
+
+### 10. Documents Live in `.specify/`
+All Speckit artifacts are kept in the `.specify/` directory, keeping project specifications separate from implementation code. This makes it easy to exclude from production builds.
+
 ---
 
-*This document will be updated as more is learned about Speckit during the blog development process.*
+## Quick Reference
+
+### Essential Commands
+```bash
+# Initialize
+specify init <project-name> --ai claude
+
+# Workflow (in Claude)
+/speckit.constitution  # Define principles
+/speckit.specify       # Define requirements
+/speckit.plan         # Create tech plan
+/speckit.tasks        # Generate task list
+/speckit.implement    # Execute tasks
+```
+
+### Key Files
+- `.specify/memory/constitution.md` - Project principles
+- `.specify/specs/NNN-feature/spec.md` - What to build
+- `.specify/specs/NNN-feature/plan.md` - How to build it
+- `.specify/specs/NNN-feature/tasks.md` - Task breakdown
+
+---
+
+*Last updated: 2025-12-17*
